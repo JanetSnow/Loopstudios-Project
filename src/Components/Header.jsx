@@ -6,9 +6,10 @@ import heroImage from "../images/desktop/image-hero.jpg";
 
 
 function Header() {
-    const navbarNav = document.querySelector(".navbar-nav");
-
-    const navbarToggle = () => navbarNav.classList.toggle('active');
+    const navbarToggle = () => {
+      const navbarNav = document.querySelector(".navbar-nav");
+      navbarNav.classList.toggle('active');
+    }
 
     return (
     <header style={{backgroundImage: `url(${heroImage})`}}>
