@@ -1,0 +1,229 @@
+/* responsive for medium desktop screen */
+@media screen and (max-width: 1200px) {
+
+    /* all glabal variables */
+    :root { --px: 80px; } /* padding left & padding right */
+
+    /* about section responsive */
+    .about .img-box {
+      margin-bottom: 80px;
+    }
+
+    .about .img-box img {
+      width:100%;
+    }
+
+    .about .content-box{
+      position: static;
+      max-width: 100%;
+      padding: 0 95px;
+      text-align: center;
+    }
+
+  }
+
+  /* responsive for large tablet screen */
+  @media screen and (max-width: 992px) {
+     /* mobile nav brand responsive */
+     .mobile-nav-brand {
+       display: flex;
+       position: absolute;
+       right: 25px;
+       left: 25px;
+       top: 40px;
+       justify-content: space-between;
+       align-items: center;
+     }
+     .mobile-nav-brand img {
+       max-width: 145px;
+     }
+
+     /* navbar for small screen */
+     .navbar-nav {
+       position: fixed;
+       top: 0;
+       left: -100%;
+       /* when left is 0, the black menu will occur and close button will appear */
+       width:100%;
+       height: 100vh;
+       background: var(--black);
+       padding: 25px;
+       display: flex;
+       align-items: center;
+       z-index: 10;
+       transition: .25s;
+     }
+     /* we can change the effect only by making active class affect navbar;
+     moreover, these two classes are in the same selector*/
+     .active {
+       left: 0;
+     }
+
+     .navbar-nav ul {
+       grid-template-columns: 1fr;
+       grid-gap: 25px;
+     }
+
+     .navbar-nav ul li a {
+       font-family: var(--ff-josefin-sans);
+       font-size: 25px;
+       font-weight: var(--fw-300);
+       text-transform: uppercase;
+     }
+
+     nav ul li::after {
+       display: none;
+     }
+
+     .nav-toggler {
+       display: block;
+     }
+
+     /* product section responsive */
+
+     .product h2 {
+       text-align: center;
+     }
+     .button-primary {
+       position: static;
+       display: block;
+       width:max-content;
+       margin: auto;
+       margin-top: 80px;
+     }
+
+     /* footer section responsive */
+     footer {
+       flex-direction: column;
+     }
+
+     .footer-left {
+       margin-bottom: 30px;
+     }
+
+     .footer-brand {
+       text-align: center;
+     }
+
+     .footer-nav ul {
+       place-content: center;
+     }
+
+     .footer-right {
+       text-align: center;
+     }
+  }
+
+  /* responsive for tablet screen */
+
+  @media screen and (max-width: 768px) {
+    /* all global variables */
+    :root {
+      --fs-h1: 4em;
+      --fs-h2: 2.8em;
+      /* spacing */
+      --px: 40px; /* padding left & padding right */
+      --mb: 120px; /* margin bottom */
+    }
+
+    /* header section responsive */
+    .banner h1 {
+      padding: 22px;
+    }
+
+    /* about section responsive */
+    .about .content-box {
+      padding: 0 50px;
+    }
+
+    /* footer section responsive */
+    footer {
+      padding: 55px var(--px);
+    }
+
+    .footer-left {
+      margin-bottom: 50px;
+    }
+
+    .footer-brand {
+      margin-bottom: 30px;
+    }
+  }
+
+  /* responsive for mobile screen */
+  @media screen and (max-width: 574px) {
+    :root {
+      --fs-h1: 2.6rem;
+      --fs-h2: 2.1rem;
+      --fs-h3: 2rem;
+      /* spacing */
+      --px: 25px; /* padding left & padding right */
+      --mb: 100px; /* margin bottom */
+    }
+
+    /* header responsive */
+    header {
+      background: center no-repeat;
+      background-size: cover;
+      padding: 40px var(--px);
+    }
+
+    /* navbar responsive */
+    .navbar {
+      margin-bottom: 160px;
+    }
+
+    .navbar-brand img {
+      max-width: 145px;
+    }
+
+    .banner h1 {
+      margin-bottom: 175px;
+    }
+
+    /* about section responsive */
+    .about .img-box {
+      margin-bottom: 50px;
+    }
+
+    .about .content-box {
+      padding: 0 15px;
+    }
+
+    .about .content-box h2 {
+      margin-bottom: 20px;
+    }
+
+    /* product section responsive */
+    .product h2 {
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      grid-gap: 25px;
+    }
+
+    .product-card {
+      height: 11.25rem;
+    }
+
+    .product-card h3 {
+      bottom: 2rem;
+    }
+
+    .button-primary {
+      margin-top: 35px;
+    }
+
+    /* footer section responsive */
+
+    .footer-nav ul {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-bottom: 15px;
+    }
+  }
